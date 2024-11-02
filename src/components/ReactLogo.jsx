@@ -29,3 +29,35 @@ const ReactLogo = (props) => {
 useGLTF.preload('models/react.glb');
 
 export default ReactLogo;
+
+//import React, { useRef } from 'react'
+// import { useGLTF } from '@react-three/drei';
+
+// const PythonLogo = (props) => {
+//   const { nodes, materials } = useGLTF('//public/models/python.glb');
+//   return (
+//     <group {...props} dispose={null}>
+//       <mesh
+//         castShadow
+//         receiveShadow
+//         geometry={nodes.Object_4.geometry}
+//         material={materials.material}
+//         position={[-0.002, 0, 0]}
+//         rotation={[Math.PI / 2, 0, 0]}
+//         scale={2.501}
+//       />
+//       <mesh
+//         castShadow
+//         receiveShadow
+//         geometry={nodes.Object_6.geometry}
+//         material={materials['.001']}
+//         position={[-0.002, 0, 0]}
+//         rotation={[-Math.PI / 2, 0, -Math.PI]}
+//         scale={2.501}
+//       />
+//     </group>
+//   );
+// };
+
+// useGLTF.preload('//public/models/python.glb');
+// export default PythonLogo;

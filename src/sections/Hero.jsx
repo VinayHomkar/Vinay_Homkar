@@ -7,6 +7,7 @@ import { PerspectiveCamera } from '@react-three/drei';
 import Cube from '../components/Cube.jsx';
 import Rings from '../components/Rings.jsx';
 import ReactLogo from '../components/ReactLogo.jsx';
+//import PythonLogo from '../components/ReactLogo.jsx';
 import Button from '../components/Button.jsx';
 import Target from '../components/Target.jsx';
 import CanvasLoader from '../components/Loading.jsx';
@@ -23,15 +24,15 @@ const Hero = () => {
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
   return (
-    <section className="min-h-screen w-full flex flex-col relative" id="home">
-      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-        <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
-          Hi, I am Adrian <span className="waving-hand">👋</span>
+    <section className="relative flex flex-col w-full min-h-screen" id="home">
+      <div className="flex flex-col w-full gap-3 mx-auto mt-20 sm:mt-36 c-space">
+        <p className="text-xl font-medium text-center text-white sm:text-3xl font-generalsans">
+          Hi, I am Vinay <span className="waving-hand">👋</span>
         </p>
-        <p className="hero_tag text-gray_gradient">Building Products & Brands</p>
+        <p className="hero_tag text-gray_gradient">Developer Makes Everything Better</p>
       </div>
 
-      <div className="w-full h-full absolute inset-0">
+      <div className="absolute inset-0 w-full h-full">
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
             {/* To hide controller */}
@@ -55,9 +56,9 @@ const Hero = () => {
         </Canvas>
       </div>
 
-      <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
-        <a href="#about" className="w-fit">
-          <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
+      <div className="absolute left-0 right-0 z-10 w-full bottom-7 c-space">
+        <a href="#contact" className="w-fit">
+          <Button name="Let's Work Together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
         </a>
       </div>
     </section>
