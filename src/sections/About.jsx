@@ -2,12 +2,22 @@ import { useState } from 'react';
 import Globe from 'react-globe.gl';
 
 import Button from '../components/Button.jsx';
+import { FaPhone } from 'react-icons/fa';
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(' adrian@jsmastery.pro');
+    navigator.clipboard.writeText(' vinayhomkar2024@gmail.com');
+    setHasCopied(true);
+
+    setTimeout(() => {
+      setHasCopied(false);
+    }, 2000);
+  };
+
+  const handleCopyPhoneNumber = () => {
+    navigator.clipboard.writeText('+917406167017');
     setHasCopied(true);
 
     setTimeout(() => {
@@ -16,17 +26,17 @@ const About = () => {
   };
 
   return (
-    <section className="c-space my-20" id="about">
-      <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
+    <section className="my-20 c-space" id="about">
+      <div className="grid h-full grid-cols-1 gap-5 xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2">
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
             <img src="assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
 
             <div>
-              <p className="grid-headtext">Hi, I’m Adrian Hajdin</p>
+              <p className="grid-headtext">Hi, I’m Vinay</p>
               <p className="grid-subtext">
-                With 12 years of experience, I have honed my skills in both frontend and backend dev, creating dynamic
-                and responsive websites.
+                As a passionate beginner in web development, I have honed my skills in both frontend and backend dev,
+                creating dynamic and responsive websites.
               </p>
             </div>
           </div>
@@ -39,8 +49,8 @@ const About = () => {
             <div>
               <p className="grid-headtext">Tech Stack</p>
               <p className="grid-subtext">
-                I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable
-                applications
+                I am gaining expertise in a range of languages, frameworks, and tools, equipping me to create robust and
+                scalable applications.
               </p>
             </div>
           </div>
@@ -56,15 +66,34 @@ const About = () => {
                 backgroundImageOpacity={0.5}
                 showAtmosphere
                 showGraticules
-                globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+                globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
-                labelsData={[{ lat: 40, lng: -100, text: 'Rjieka, Croatia', color: 'white', size: 15 }]}
+                labelsData={[{ lat: 12.971599, lng: 77.594566, text: 'My Location', color: 'white', size: 100 }]}
               />
             </div>
-            <div>
+            <div id="#contact">
               <p className="grid-headtext">I’m very flexible with time zone communications & locations</p>
-              <p className="grid-subtext">I&apos;m based in Rjieka, Croatia and open to remote work worldwide.</p>
-              <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+              <p className="grid-subtext">I&apos;m based in Bengaluru, India and open to remote work worldwide.</p>
+              {/* <div className="copy-container" onClick={handleCopy}>
+                <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy" />
+                <p className="font-medium text-white lg:text-2xl md:text-xl text-gray_gradient">
+                  vinayhomkar2024@gmail.com
+                </p>
+              </div> */}
+              <div className="copy-container" onClick={handleCopyPhoneNumber}>
+                <Button
+                  name={
+                    <div className="flex items-center">
+                      <FaPhone className="mr-2" />
+                      <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy" className="mr-2" />
+                      <p className="font-medium text-white lg:text-2xl md:text-xl text-gray_gradient">+91 7406167017</p>
+                    </div>
+                  }
+                  isBeam
+                  containerClass="w-full mt-10"
+                  onClick={handleCopyPhoneNumber}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -92,10 +121,12 @@ const About = () => {
             />
 
             <div className="space-y-2">
-              <p className="grid-subtext text-center">Contact me</p>
+              <p className="text-center grid-subtext">Contact me</p>
               <div className="copy-container" onClick={handleCopy}>
                 <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy" />
-                <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">adrian@jsmastery.pro</p>
+                <p className="font-medium text-white lg:text-2xl md:text-xl text-gray_gradient">
+                  vinayhomkar2024@gmail.com
+                </p>
               </div>
             </div>
           </div>
