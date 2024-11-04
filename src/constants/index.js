@@ -46,7 +46,7 @@ export const myProjects = [
       border: '0.2px solid #36201D',
       boxShadow: '0px 0px 60px 0px #AA3C304D',
     },
-    spotlight: '/assets/spotlight1.png',
+    spotlight: '/assets/spotlight2.png',
     tags: [
       {
         id: 1,
@@ -65,6 +65,80 @@ export const myProjects = [
       },
       {
         id: 4,
+        name: 'MongoDB',
+        path: '/assets/mongo.png',
+      },
+    ],
+  },
+  {
+    title: 'My Portfolio',
+    desc: 'My personal portfolio as a software developer showcases my skills. It presents my projects in a user-friendly format, making it easy for potential clients and employers to explore my expertise.',
+    subdesc:
+      'In developing the portfolio, I used React.js to create a dynamic interface and integrated Three.js for engaging 3D graphics and animations. Email.js powers a contact form for seamless communication. This blend of technologies highlights my technical abilities and passion for creating engaging web experiences.',
+    href: 'https://vinayhomkar.vercel.app/',
+    texture: '/textures/project/project2.mp4',
+    logo: '/assets/project-logo2.png',
+    logoStyle: {
+      backgroundColor: '#2A1816',
+      border: '0.2px solid #36201D',
+      boxShadow: '0px 0px 60px 0px #AA3C304D',
+    },
+    spotlight: '/assets/spotlight1.png',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/assets/react.svg',
+      },
+      {
+        id: 2,
+        name: 'Three.js',
+        path: 'assets/threejs.png',
+      },
+      {
+        id: 3,
+        name: 'Email.js',
+        path: '/assets/emailjs.png',
+      },
+    ],
+  },
+  {
+    title: 'ImageAIPro',
+    desc: 'ImageAIPro is a marketplace where people can buy, sell, and share AI prompts. It provides customized experiences for users, sellers, and admins. Users can browse a collection of prompts, sellers can set up profiles and track their sales, and admins manage accounts and ensure quality.',
+    subdesc:
+      'Developed with Next.js, Clerk, Node.js, MongoDB, Prisma, and TypeScript, ImageAIPro ensures seamless transactions and robust account management, promoting global collaboration in AI prompt solutions.',
+    href: 'http://imageaipro-darshan-s-ns-projects.vercel.app',
+    texture: '/textures/project/project3.mp4',
+    logo: '/assets/project-logo3.png',
+    logoStyle: {
+      backgroundColor: '#2A1816',
+      border: '0.2px solid #36201D',
+      boxShadow: '0px 0px 60px 0px #AA3C304D',
+    },
+    spotlight: '/assets/spotlight3.png',
+    tags: [
+      {
+        id: 1,
+        name: 'Next.js',
+        path: '/assets/next.png',
+      },
+      {
+        id: 2,
+        name: 'TypeScript',
+        path: 'assets/typescript.png',
+      },
+      {
+        id: 3,
+        name: 'Clerk',
+        path: '/assets/clerk.png',
+      },
+      {
+        id: 4,
+        name: 'Prisma',
+        path: '/assets/prisma.png',
+      },
+      {
+        id: 5,
         name: 'MongoDB',
         path: '/assets/mongo.png',
       },

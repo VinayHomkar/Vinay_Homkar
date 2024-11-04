@@ -37,8 +37,8 @@
 // export default Clients;
 
 import { motion } from 'framer-motion';
-import { styles } from '../styles';
-import { fadeIn, textVariant } from '../utils/motion';
+//import { styles } from '../styles';
+import { fadeIn } from '../utils/motion';
 import { testimonials } from '../constants';
 
 const FeedbackCard = ({ index, testimonial, name, designation, company, image }) => (
@@ -69,13 +69,9 @@ const FeedbackCard = ({ index, testimonial, name, designation, company, image })
 const Feedbacks = () => {
   return (
     <section className="my-20 c-space">
-      <p className="head-text">Testimonials.</p>
-      <div className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}>
-        <motion.div variants={textVariant()}></motion.div>
-      </div>
-
+      <p className="head-text">Testimonials</p>
       {/* Responsive container for cards */}
-      <div className="flex flex-wrap justify-center px-4 -mt-20 pb-14 gap-7 sm:justify-start">
+      <div className="flex flex-wrap justify-center px-4 pb-4 mt-20 gap-7 sm:justify-start">
         {testimonials.map((testimonial, index) => (
           <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
         ))}
